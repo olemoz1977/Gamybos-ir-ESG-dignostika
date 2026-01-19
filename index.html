@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMESG360 Diagnostika</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
+    <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-xl p-8 mb-6">
+            <h1 class="text-3xl font-bold text-indigo-900 mb-2">OMESG360</h1>
+            <p class="text-gray-600 mb-6">Pirmine Gamybos ir ESG Diagnostika</p>
+
+            <div class="mb-8">
+                <h2 class="text-xl font-semibold text-indigo-800 mb-4">I DALIS: Gamybos srautas (TOC/LEAN)</h2>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            1. Ar zinote, kuri operacija riboja gamyklos pralaiduma?
+                        </label>
+                        <select id="q1" class="w-full p-2 border border-gray-300 rounded-md">
+                            <option value="">Pasirinkite...</option>
+                            <option value="yes">Taip</option>
+                            <option value="partial">Is dalies</option>
+                            <option value="no">Ne</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            2. Kiek valandu per para stovi del gedimu?
+                        </label>
+                        <input type="number" step="0.5" id="q2" class="w-full p-2 border border-gray-300 rounded-md" placeholder="2.5">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            3. WIP lygis tarp operaciju?
+                        </label>
+                        <select id="q3" class="w-full p-2 border border-gray-300 rounded-md">
+                            <option value="">Pasirinkite...</option>
+                            <option value="low">Zemas</option>
+                            <option value="medium">Vidutinis</option>
+                            <option value="high">Aukstas</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-xl font-semibold text-green-800 mb-4">II DALIS: ESG - Aplinkosauga (E)</h2>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            4. Kokia dalis zaliavu tampa atliekomis?
+                        </label>
+                        <select id="q4" class="w-full p-2 border border-gray-300 rounded-md">
+                            <option value="">Pasirinkite...</option>
+                            <option value="low">Zema (maziau 5%)</option>
+                            <option value="medium">Vidutine (5-15%)</option>
+                            <option value="high">Auksta (daugiau 15%)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            5. Ar stebite energijos suvartojima?
+                        </label>
+                        <select id="q5" class="w-full p-2 border border-gray-300 rounded-md">
+                            <option value="">Pasirinkite...</option>
+                            <option value="detailed">Taip, detaliai</option>
+                            <option value="general">Tik bendra</option>
+                            <option value="none">Ne</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            6. Ar turite atlieku perdirbimo sistema?
+                        </label>
+                        <select id="q6" class="w-full p-2 border border-gray-300 rounded-md">
+                            <option value="">Pasirinkite...</option>
+                            <option value="yes">Taip</option>
+                            <option value="partial">Dalinai</option>
+                            <option value="no">Ne</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-xl font-semibold text-purple-800 mb-4">III DALIS: ESG - Zmones (S)</h2>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            7. Darbuotoju kaita per 12 men. (%)
+                        </label>
+                        <input type="number" step="0.1" id="q7" class="w-full p-2 border border-gray-300 rounded-md" placeholder="15.5">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            8. Ar darbuotojai teikia siulymus?
+                        </label>
+                        <select id="q8" class="w-full p-2 border border-gray-300 rounded-md">
+                            <option value="">Pasirinkite...</option>
+                            <option value="yes">Taip</option>
+                            <option value="sometimes">Kartais</option>
+                            <option value="no">Ne</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            9. Ergonomika darbo vietose
+                        </label>
+                        <select id="q9" class="w-full p-2 border border-gray-300 rounded-md">
+                            <option value="">Pasirinkite...</option>
+                            <option value="good">Gera</option>
+                            <option value="ok">Priimtina</option>
+                            <option value="poor">Prasta</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-8 bg-gray-50 p-4 rounded-lg">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Papildomi duomenys</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            Valandinis pajamingumas (EUR/val)
+                        </label>
+                        <input type="number" id="revenue" class="w-full p-2 border border-gray-300 rounded-md" placeholder="500">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            Darbo dienu per metus
+                        </label>
+                        <input type="number" id="workdays" class="w-full p-2 border border-gray-300 rounded-md" placeholder="250">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            Vidutinis atlyginimas (EUR/metai)
+                        </label>
+                        <input type="number" id="salary" class="w-full p-2 border border-gray-300 rounded-md" placeholder="24000">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            Idarbinimo kaina (EUR)
+                        </label>
+                        <input type="number" id="recruit" class="w-full p-2 border border-gray-300 rounded-md" placeholder="3000">
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="calc()" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700">
+                Skaiciuoti
+            </button>
+        </div>
+
+        <div id="results" class="bg-white rounded-lg shadow-xl p-8 hidden">
+            <h2 class="text-2xl font-bold text-indigo-900 mb-6">Rezultatai</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-red-50 p-6 rounded-lg border-2 border-red-200">
+                    <h3 class="font-semibold text-gray-700 mb-2">E-Loss</h3>
+                    <p id="r1" class="text-3xl font-bold"></p>
+                    <p class="text-sm text-gray-600 mt-2">Nuostolis del prastovu</p>
+                </div>
+
+                <div class="bg-green-50 p-6 rounded-lg border-2 border-green-200">
+                    <h3 class="font-semibold text-gray-700 mb-2">ESG-Gap</h3>
+                    <p id="r2" class="text-3xl font-bold"></p>
+                    <p class="text-sm text-gray-600 mt-2">Atitikties trukumas</p>
+                </div>
+
+                <div class="bg-purple-50 p-6 rounded-lg border-2 border-purple-200">
+                    <h3 class="font-semibold text-gray-700 mb-2">H-Waste</h3>
+                    <p id="r3" class="text-3xl font-bold"></p>
+                    <p class="text-sm text-gray-600 mt-2">Kaitos kastai</p>
+                </div>
+            </div>
+
+            <div id="recs" class="bg-blue-50 p-6 rounded-lg border-2 border-blue-200 hidden">
+                <h3 class="font-semibold text-gray-800 mb-4">Rekomendacijos</h3>
+                <ul id="reclist" class="space-y-2"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function calc() {
+        var v1 = document.getElementById('q1').value;
+        var v2 = parseFloat(document.getElementById('q2').value) || 0;
+        var v3 = document.getElementById('q3').value;
+        var v4 = document.getElementById('q4').value;
+        var v5 = document.getElementById('q5').value;
+        var v6 = document.getElementById('q6').value;
+        var v7 = parseFloat(document.getElementById('q7').value) || 0;
+        var v8 = document.getElementById('q8').value;
+        var v9 = document.getElementById('q9').value;
+        var rev = parseFloat(document.getElementById('revenue').value) || 0;
+        var days = parseFloat(document.getElementById('workdays').value) || 250;
+        var sal = parseFloat(document.getElementById('salary').value) || 0;
+        var rec = parseFloat(document.getElementById('recruit').value) || 0;
+
+        var eLoss = v2 * rev * days;
+
+        var s1 = v4 === 'low' ? 100 : v4 === 'medium' ? 50 : 25;
+        var s2 = v5 === 'detailed' ? 100 : v5 === 'general' ? 30 : 0;
+        var s3 = v6 === 'yes' ? 100 : v6 === 'partial' ? 50 : 0;
+        var esgGap = 100 - ((s1 + s2 + s3) / 3);
+
+        var ss = v8 === 'yes' ? 0 : v8 === 'sometimes' ? 0.3 : 0.5;
+        var es = v9 === 'good' ? 0 : v9 === 'ok' ? 0.2 : 0.4;
+        var h1 = (v7 / 100) * (sal + rec);
+        var h2 = ss * sal * 0.1;
+        var h3 = es * sal * 0.15;
+        var hWaste = h1 + h2 + h3;
+
+        var rlist = [];
+        if (v1 === 'no') rlist.push('Atlikite TOC analize');
+        if (v2 > 2) rlist.push('Didelis prastovu lygis - idiekite TPM');
+        if (esgGap > 50) rlist.push('ESG atitiktis zema - pradekite monitoringa');
+        if (v6 === 'no') rlist.push('Sukurkite atlieku perdirbimo sistema');
+        if (v7 > 15) rlist.push('Auksta kaita - perziurekite strategija');
+        if (v8 === 'no') rlist.push('Idiekite Kaizen/Lean sistema');
+
+        var c1 = eLoss > 50000 ? 'text-red-600' : eLoss > 20000 ? 'text-orange-500' : 'text-green-600';
+        var c2 = esgGap > 60 ? 'text-red-600' : esgGap > 30 ? 'text-orange-500' : 'text-green-600';
+        var c3 = hWaste > 30000 ? 'text-red-600' : hWaste > 10000 ? 'text-orange-500' : 'text-green-600';
+
+        document.getElementById('r1').textContent = Math.round(eLoss).toLocaleString() + ' EUR';
+        document.getElementById('r1').className = 'text-3xl font-bold ' + c1;
+
+        document.getElementById('r2').textContent = esgGap.toFixed(1) + '%';
+        document.getElementById('r2').className = 'text-3xl font-bold ' + c2;
+
+        document.getElementById('r3').textContent = Math.round(hWaste).toLocaleString() + ' EUR';
+        document.getElementById('r3').className = 'text-3xl font-bold ' + c3;
+
+        if (rlist.length > 0) {
+            var ul = document.getElementById('reclist');
+            ul.innerHTML = '';
+            for (var i = 0; i < rlist.length; i++) {
+                var li = document.createElement('li');
+                li.className = 'text-gray-700';
+                li.textContent = '• ' + rlist[i];
+                ul.appendChild(li);
+            }
+            document.getElementById('recs').classList.remove('hidden');
+        }
+
+        document.getElementById('results').classList.remove('hidden');
+        document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+    }
+    </script>
+</body>
+</html>
