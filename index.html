@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,21 +6,21 @@
     <title>OMESG360 Diagnostika</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
+<body class="min-h-screen bg-transparent p-6">
     <div class="max-w-4xl mx-auto">
-        <div class="bg-white rounded-lg shadow-xl p-8 mb-6">
-            <h1 class="text-3xl font-bold text-indigo-900 mb-2">OMESG360</h1>
-            <p class="text-gray-600 mb-6">Pirmine Gamybos ir ESG Diagnostika</p>
+        <div class="bg-gray-900 bg-opacity-95 rounded-lg shadow-2xl p-8 mb-6 border border-gray-700">
+            <h1 class="text-3xl font-bold text-white mb-2">OMESG360</h1>
+            <p class="text-gray-300 mb-6">Pirmine Gamybos ir ESG Diagnostika</p>
 
             <div class="mb-8">
-                <h2 class="text-xl font-semibold text-indigo-800 mb-4">I DALIS: Gamybos srautas (TOC/LEAN)</h2>
+                <h2 class="text-xl font-semibold text-blue-400 mb-4">I DALIS: Gamybos srautas (TOC/LEAN)</h2>
                 
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
                             1. Ar zinote, kuri operacija riboja gamyklos pralaiduma?
                         </label>
-                        <select id="q1" class="w-full p-2 border border-gray-300 rounded-md">
+                        <select id="q1" class="w-full p-2 border border-gray-600 bg-gray-800 text-white rounded-md focus:ring-2 focus:ring-blue-500">
                             <option value="">Pasirinkite...</option>
                             <option value="yes">Taip</option>
                             <option value="partial">Is dalies</option>
@@ -30,17 +29,17 @@
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
                             2. Kiek valandu per para stovi del gedimu?
                         </label>
-                        <input type="number" step="0.5" id="q2" class="w-full p-2 border border-gray-300 rounded-md" placeholder="2.5">
+                        <input type="number" step="0.5" id="q2" class="w-full p-2 border border-gray-600 bg-gray-800 text-white rounded-md focus:ring-2 focus:ring-blue-500" placeholder="2.5">
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
                             3. WIP lygis tarp operaciju?
                         </label>
-                        <select id="q3" class="w-full p-2 border border-gray-300 rounded-md">
+                        <select id="q3" class="w-full p-2 border border-gray-600 bg-gray-800 text-white rounded-md focus:ring-2 focus:ring-blue-500">
                             <option value="">Pasirinkite...</option>
                             <option value="low">Zemas</option>
                             <option value="medium">Vidutinis</option>
@@ -51,14 +50,14 @@
             </div>
 
             <div class="mb-8">
-                <h2 class="text-xl font-semibold text-green-800 mb-4">II DALIS: ESG - Aplinkosauga (E)</h2>
+                <h2 class="text-xl font-semibold text-green-400 mb-4">II DALIS: ESG - Aplinkosauga (E)</h2>
                 
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
                             4. Kokia dalis zaliavu tampa atliekomis?
                         </label>
-                        <select id="q4" class="w-full p-2 border border-gray-300 rounded-md">
+                        <select id="q4" class="w-full p-2 border border-gray-600 bg-gray-800 text-white rounded-md focus:ring-2 focus:ring-blue-500">
                             <option value="">Pasirinkite...</option>
                             <option value="low">Zema (maziau 5%)</option>
                             <option value="medium">Vidutine (5-15%)</option>
@@ -67,10 +66,10 @@
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
                             5. Ar stebite energijos suvartojima?
                         </label>
-                        <select id="q5" class="w-full p-2 border border-gray-300 rounded-md">
+                        <select id="q5" class="w-full p-2 border border-gray-600 bg-gray-800 text-white rounded-md focus:ring-2 focus:ring-blue-500">
                             <option value="">Pasirinkite...</option>
                             <option value="detailed">Taip, detaliai</option>
                             <option value="general">Tik bendra</option>
@@ -79,10 +78,10 @@
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
                             6. Ar turite atlieku perdirbimo sistema?
                         </label>
-                        <select id="q6" class="w-full p-2 border border-gray-300 rounded-md">
+                        <select id="q6" class="w-full p-2 border border-gray-600 bg-gray-800 text-white rounded-md focus:ring-2 focus:ring-blue-500">
                             <option value="">Pasirinkite...</option>
                             <option value="yes">Taip</option>
                             <option value="partial">Dalinai</option>
@@ -93,11 +92,11 @@
             </div>
 
             <div class="mb-8">
-                <h2 class="text-xl font-semibold text-purple-800 mb-4">III DALIS: ESG - Zmones (S)</h2>
+                <h2 class="text-xl font-semibold text-purple-400 mb-4">III DALIS: ESG - Zmones (S)</h2>
                 
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        <label class="block text-sm font-medium text-gray-300 mb-2">
                             7. Darbuotoju kaita per 12 men. (%)
                         </label>
                         <input type="number" step="0.1" id="q7" class="w-full p-2 border border-gray-300 rounded-md" placeholder="15.5">
