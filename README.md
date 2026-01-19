@@ -12,4 +12,4 @@ ESG-Gap (Tvarumo atotrūkis): Tai jūsų įmonės ateities rizika. Didėjantys e
 H-Waste (Žmogiškasis nuostolis): Darbuotojų kaita ir neįtraukimas yra brangiausia „nematoma“ sąnauda. Kiekvienas išėjęs specialistas išsineša patirtį, kurios kaina viršija jo metinį atlyginimą.
 
 Užpildykite 2 minučių diagnostiką ir pamatykite realų savo gamyklos vaizdą.
-Greitas testas (https://olemoz1977.github.io/Gamybos-ir-ESG-dignostika/)
+Greitas testas [(https://olemoz1977.github.io/Gamybos-ir-ESG-dignostika/public)]
